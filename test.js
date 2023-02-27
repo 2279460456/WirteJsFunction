@@ -25,6 +25,7 @@
 // console.log(fun(arr1))
 
 
+
 // function mynew(fn, ...args) {
 //     let obj = {};
 //     obj.__proto__ = fn.prototype;

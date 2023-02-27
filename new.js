@@ -11,7 +11,6 @@ function Create(a, b) {
     // console.log(arr)
     this.a = a
     this.b = b
-
 }
 let obj = MyNew(Create, 1, 2);
 

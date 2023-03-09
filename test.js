@@ -98,13 +98,50 @@
 // }
 
 
-function currying(fn, ...args) {
-    let len = fn.length;
-    return function (...params) {
-        let newparams = [...args, ...params];
-        if (newparams.length < len) {
-            return currying.call(this, fn, ...newparams)
-        }
-        fn.call(this, ...newparams)
-    }
-}
+// function currying(fn, ...args) {
+//     let len = fn.length;
+//     return function (...params) {
+//         let newparams = [...args, ...params];
+//         if (newparams.length < len) {
+//             return currying.call(this, fn, ...newparams)
+//         }
+//         fn.call(this, ...newparams)
+//     }
+// }
+
+// let value = 1;
+
+// function foo() {
+//     console.log(value);
+// }
+
+// function bar() {
+//     let value = 2;
+//     foo();
+// }
+
+// bar();
+
+
+
+new Promise((res, rej) => {
+    res(1);
+}).then(value => {
+    console.log(value);
+    throw new Error('123');
+}).then(() => {
+    console.log(2)
+}).catch(() => {
+    console.log(3);
+}).then(() => {
+    console.log(20); return 10
+}).then(value => {
+    console.log(value)
+}).catch(value=>console.log(value))
+
+
+
+// let str = '   a bc ';
+// let reg = /^(\s*)|(\s*)$/g
+// let result = str.replace(reg, '');
+// console.log(result.length) 

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -49,4 +49,52 @@
     <button id="btn"> 提交</button>
 </body>
 
+</html> -->
+
+
+
+<html>
+  <head>
+    <style>
+      /* top: 50%;left: 50%;， 是以左上角为原点，故不处于中心位置 */
+      /* transform:translate(-50%,-50%); 作用是，往上（x轴）,左（y轴）移动自身长宽的 50%，以使其居于中心位置。 */
+      .semi-circle {
+        width: 200px;
+        height: 400px;
+        margin: 200px auto;
+        position: relative;
+        background: #000000;
+        border-radius: 8px;
+      }
+
+      .semi-circle:after {
+        position: absolute;
+        content: "";
+        width: 20px;
+        height: 20px;
+        background: #fff;
+        border-radius: 100%;
+        right: 0;
+        top: 50%;
+        transform: translate(50%, -50%);
+      }
+
+      .semi-circle:before {
+        position: absolute;
+        content: "";
+        width: 20px;
+        height: 20px;
+        background: #fff;
+        border-radius: 100%;
+        left: 0;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- css 矩形两边挖半圆 -->
+    <div class="semi-circle"></div>
+
+  </body>
 </html>

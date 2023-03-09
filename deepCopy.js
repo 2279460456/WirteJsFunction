@@ -16,7 +16,6 @@ function deepCopy(obj) {
     return newobj;
 }
 
-
 // function deepCopy(obj) {
 //     let newobj = Object.prototype.toString.call(obj) === 'Object' ? {} : [];
 //     for (let key in obj) {
